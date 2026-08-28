@@ -3,96 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="expires" content="0">
 <meta name="robots" content="noindex">
 <title>Acacia HBC — Company Presentation</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141414'/%3E%3Crect x='9' y='10' width='14' height='2' fill='%23fff'/%3E%3Crect x='9' y='15' width='14' height='2' fill='%23fff'/%3E%3Crect x='9' y='20' width='9' height='2' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2310213B'/%3E%3Crect x='9' y='10' width='14' height='2' fill='%23fff'/%3E%3Crect x='9' y='15' width='14' height='2' fill='%23fff'/%3E%3Crect x='9' y='20' width='9' height='2' fill='%23fff'/%3E%3C/svg%3E">
 
 <!-- ==========================================================
-     EDIT BELOW. Nothing else in this file needs to change.
-     Set TARGET to "primary" or "mirror". Commit. Done.
+     DON'T EDIT THIS FILE TO SWITCH DESTINATIONS. Edit config.json.
+     The values below are the offline fallback, used only if
+     config.json can't be reached. Keep them sane, not current.
      ========================================================== -->
 <script>
-  const TARGET  = "primary";
-
-  const PRIMARY = "https://canva.link/49a2qs6kbfw8xck";
-  const MIRROR  = "https://jnpkwan.github.io/AcaciaHBC/acacia-company-profile.pdf";
+  const FALLBACK = {
+    target:  "mirror",
+    primary: "https://canva.link/49a2qs6kbfw8xck",
+    mirror:  "https://jnpkwan.github.io/AcaciaHBC/acacia-company-profile.pdf"
+  };
+  const TIMEOUT_MS = 1500;
 </script>
 <!-- ========================================================== -->
 
 <style>
   :root {
-    --ink:   #141414;
-    --paper: #faf9f7;
-    --rule:  #d8d4cd;
+    --ink:   #10213B;
+    --paper: #FFFFFF;
+    --mist:  #F5F5F5;
+    --rule:  #DDDDDD;
     --mute:  #6f6a63;
+    --green: #22A749;
+    --blue:  #1B4DA0;
   }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body {
     background: var(--paper);
-    color: var(--ink);
-    font: 400 16px/1.55 ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #2C2C2C;
+    font: 400 16px/1.55 "Open Sans", -apple-system, ui-sans-serif, Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 32px 24px;
     -webkit-font-smoothing: antialiased;
   }
-  main {
-    width: 100%;
-    max-width: 380px;
-  }
+  main { width: 100%; max-width: 380px; }
   .eyebrow {
+    font-family: Montserrat, -apple-system, Arial, sans-serif;
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--mute);
-    margin: 0 0 10px;
+    color: var(--green);
+    margin: 0 0 8px;
   }
   h1 {
-    font-size: 27px;
-    line-height: 1.2;
-    letter-spacing: -0.015em;
-    font-weight: 600;
+    font-family: Montserrat, -apple-system, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    color: var(--ink);
     margin: 0 0 14px;
   }
-  p.lede {
-    margin: 0 0 28px;
-    color: var(--mute);
-    font-size: 15px;
-  }
+  p.lede { margin: 0 0 28px; color: var(--mute); font-size: 15px; }
   a.btn {
     display: block;
-    padding: 15px 18px;
-    border: 1px solid var(--ink);
-    border-radius: 3px;
+    padding: 14px 20px;
+    border: 1.5px solid var(--blue);
+    border-radius: 8px;
     text-decoration: none;
     color: var(--paper);
-    background: var(--ink);
-    font-weight: 500;
+    background: var(--blue);
+    font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
   }
-  .cn {
-    display: block;
-    font-size: 12px;
-    font-weight: 400;
-    opacity: 0.72;
-    margin-top: 2px;
-  }
-  a.btn.alt {
-    background: transparent;
-    color: var(--ink);
-    border-color: var(--rule);
-    font-weight: 400;
-  }
-  a.btn:focus-visible {
-    outline: 2px solid var(--ink);
-    outline-offset: 3px;
-  }
+  a.btn.alt { background: var(--paper); color: var(--blue); font-weight: 400; }
+  a.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .cn { display: block; font-size: 12px; font-weight: 400; opacity: 0.72; margin-top: 2px; }
   footer {
     margin-top: 26px;
     padding-top: 16px;
@@ -105,9 +91,9 @@
 <body>
 
 <main>
-  <p class="eyebrow">Acacia HBC</p>
+  <p class="eyebrow">Acacia Home Builders</p>
   <h1>Opening the presentation</h1>
-  <p class="lede">If it doesn’t open on its own, use a link below.</p>
+  <p class="lede">If it doesn't open on its own, use a link below.</p>
 
   <a class="btn"     id="a-mirror"  href="#">Open the PDF<span class="cn">打开 PDF</span></a>
   <a class="btn alt" id="a-primary" href="#">Open the online version<span class="cn">在线版本</span></a>
@@ -116,15 +102,34 @@
 </main>
 
 <script>
-  (function () {
-    var dest = (TARGET === "mirror") ? MIRROR : PRIMARY;
+(function () {
+  var done = false;
 
-    document.getElementById("a-primary").href = PRIMARY;
-    document.getElementById("a-mirror").href  = MIRROR;
+  function go(cfg) {
+    if (done) return;
+    done = true;
+
+    var primary = cfg.primary || FALLBACK.primary;
+    var mirror  = cfg.mirror  || FALLBACK.mirror;
+    var target  = (cfg.target === "primary" || cfg.target === "mirror")
+                    ? cfg.target : FALLBACK.target;
+
+    document.getElementById("a-primary").href = primary;
+    document.getElementById("a-mirror").href  = mirror;
 
     // replace() keeps this page out of history, so Back doesn't trap the scanner
-    window.location.replace(dest);
-  })();
+    window.location.replace(target === "primary" ? primary : mirror);
+  }
+
+  // Hard ceiling: never leave a scanner staring at this page.
+  setTimeout(function () { go(FALLBACK); }, TIMEOUT_MS);
+
+  // Timestamp makes the URL unique every load, so no cache can serve a stale copy.
+  fetch("config.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(go)
+    .catch(function () { go(FALLBACK); });
+})();
 </script>
 
 </body>
