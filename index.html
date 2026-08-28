@@ -15,10 +15,10 @@
      Set TARGET to "primary" or "mirror". Commit. Done.
      ========================================================== -->
 <script>
-  const TARGET  = "primary";
+  const TARGET  = "mirror";
 
   const PRIMARY = "https://canva.link/49a2qs6kbfw8xck";
-  const MIRROR  = "https://drive.google.com/file/d/1Ec9peK7byBetiMkRLkRys5jprdwRO3tp/view";
+  const MIRROR  = "https://jnpkwan.github.io/AcaciaHBC/acacia-company-profile.pdf";
 </script>
 <!-- ========================================================== -->
 
@@ -76,6 +76,13 @@
     text-align: center;
     margin-bottom: 10px;
   }
+  .cn {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.72;
+    margin-top: 2px;
+  }
   a.btn.alt {
     background: transparent;
     color: var(--ink);
@@ -100,12 +107,12 @@
 <main>
   <p class="eyebrow">Acacia HBC</p>
   <h1>Opening the presentation</h1>
-  <p class="lede">If it doesn't open on its own, use a link below.</p>
+  <p class="lede">If it doesn’t open on its own, use a link below.</p>
 
-  <a class="btn"     id="a-primary" href="#">Open the presentation</a>
-  <a class="btn alt" id="a-mirror"  href="#">Open the PDF copy</a>
+  <a class="btn"     id="a-mirror"  href="#">Open the PDF<span class="cn">打开 PDF</span></a>
+  <a class="btn alt" id="a-primary" href="#">Open the online version<span class="cn">在线版本</span></a>
 
-  <footer>Both links hold the same presentation.</footer>
+  <footer>Both links hold the same presentation.<br>两个链接内容相同。</footer>
 </main>
 
 <script>
